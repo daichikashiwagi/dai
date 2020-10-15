@@ -1,0 +1,13 @@
+name: dai
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: スクレイピング
+        run: |
+          git clone https://github.com/yuzuru-program/scraping-node-yahoo.git dai
+          cd dai
+          npm i
+          node index
